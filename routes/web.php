@@ -39,4 +39,5 @@ Route::get('/', function () {
         'title'=>'update title',
         'content'=>'update content'
     ]);
+    return 'updated';
 });
