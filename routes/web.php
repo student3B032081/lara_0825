@@ -41,19 +41,14 @@ Route::get('/', function () {
     //    ]);
     //    return 'updated';
 
-    $post = Post::find(1);
-    $post->delete();
-    Post::destory(2);
-    Post::destory(3,5,7);
-    return 'deleted';
+
     //    $post->title = 'saved title';
     //    $post->content = 'saved content';
     //    $post->save();
     //    return 'Saved';
 
-
-
-
+    $lastPost = Post::orderBy('id', 'desc')->first();
+    dd($lastPost);
 
 
 });
