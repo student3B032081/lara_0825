@@ -20,9 +20,17 @@ Route::get('/', function () {
     //$post->content = 'test content';
     //$post->save();
 
-    Post::create([
-        'title'=>'test title',
-        'content'=>'test content',
+    //Post::create([
+    //        'title'=>'test title',
+    //        'content'=>'test content',
+    //
+    //    ]);
 
-    ]);
+    // $post = Post::find(1);
+    //    echo '標題: ' . $post->title . '<br>';
+    //    echo '內容: ' . $post->content . '<br>';
+    //    dd($post);
+
+    $posts = Post::where('id','<','10')->orderBy('id','DESC')->get();
+    dd($posts);
 });
